@@ -17,13 +17,12 @@ def message_screen(id, group_info, message_info):
 
 
 def main():
-    first_line = input()
-    info = list(map(int, first_line.split(' ')))
+    info = list(map(int, input().split(' ')))
 
     group_info = [list(map(int, input().split(' '))) for i in range(info[1])]
     group_info = dict([(i+1, j[1:]) for i, j in enumerate(group_info)])
 
-    message_info = [input().split(' ') for i in range(info[0])]
+    message_info = [input().split(' ') for i in range(info[2])]
     message_info = [[int(i[0]), int(i[1]), int(i[2]), i[3]] for i in message_info]
 
     for i in range(1, info[0] + 1):
