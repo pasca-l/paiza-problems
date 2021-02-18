@@ -27,8 +27,7 @@ def change_schedule(inputlist, daysoff, shiftvalue):
 
 
 def main():
-    first_line = input()
-    days = list(map(int, first_line.split(' ')))
+    days = list(map(int, input().split(' ')))
     #0 = 'off', 1 = 'work'
     schedule = [0 if input() == 'off' else 1 for i in range(days[0])]
 
