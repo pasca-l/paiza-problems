@@ -1,6 +1,6 @@
 def message_screen(id, group_info, message_info):
     result = []
-    for _, j in enumerate(message_info):
+    for j in message_info:
         if j[0] == id:
             result.append(j[3])
             continue
@@ -27,10 +27,9 @@ def main():
     message_info = [[int(i[0]), int(i[1]), int(i[2]), i[3]] for i in message_info]
 
     for i in range(1, info[0] + 1):
-        for _, j in enumerate(message_screen(i, group_info, message_info)):
+        for j in message_screen(i, group_info, message_info):
             print(j)
         if i == info[0]:
-            print("")
             break
         print("--")
 
