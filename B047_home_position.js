@@ -65,4 +65,5 @@ for (let i = 0; i < line.length; i++) {
         }
     }
 }
+
 console.log(count);
